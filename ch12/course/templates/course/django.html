@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django page</title>
+</head>
+<body>
+    <h1>This is Django page</h1>
+    {% comment%} This is example 1 {% endcomment %}
+    {% comment %} <h2>Name: {{ name }}</h2> we are passing the value of name variable from the view to the template {% endcomment %}
+
+    {% comment %} This is example 2
+    {% comment %} <h2>Name:{{nm}}</h2>
+    <h2>Duration:{{du}}</h2> {% comment %} we are passing the value of du variable from the view to the template {% endcomment %}
+    {% comment %} <h2>seats:{{st}}</h2>
+    <hr> {% endcomment %} 
+
+    {% comment %} This is example 3 filter {% endcomment %}
+    {% comment %} <h2> filters example</h2>
+    <h3> {{ name|lower }}</h3>
+    <h3> {{ name|upper }}</h3>
+    <h3> {{ name|length }}</h3>
+    <h3> {{ name|title }}</h3>
+    <h3> {{ name|capfirst }}</h3>
+    <h3> {{ desc|truncatewords:3 }}</h3>
+    <h3> {{ desc|truncatechars:10}}</h3>
+    <h3> {{ desc|slugify }}</h3>
+    <h3> {{ desc|slugify|upper }}</h3>
+    <h3> {{ desc|linebreaks }}</h3>
+    <h3> {{ desc|linebreaksbr }}</h3>
+    <h3> {{ name|pluralize }}</h3> {% endcomment %}
+
+
+    {% comment %} This is example 4 date and time {% endcomment %}
+    {% comment %} <h2>date and time example</h2>
+    <h3> {{ dt }}</h3>
+    <h3> {{ dt|date }}</h3>
+    <h3> {{ dt|time }}</h3>
+    <h3> {{ dt|time:"h:i:s" }}</h3>
+    <h3> {{ dt|time:"h:i:s A" }}</h3>
+    <h3> {{ dt|time:"h:i:s a" }}</h3>
+    <h3>{{dt|date:"D d M Y"}}</h3>
+    <h3>{{dt|date:"D d M Y h:i:s A"}}</h3>
+    <h3>{{dt|date:'SHORT_DATE_FORMAT'}}</h3>
+    <h3>{{dt|date:'SHORT_DATETIME_FORMAT'}}</h3>
+    <h3>{{dt|date:'DATE_FORMAT'}}</h3>
+    <h3>{{dt|time:'TIME_FORMAT'}}</h3> {% endcomment %}
+
+    {% comment %} This is example 5 {% endcomment %}
+    {% comment %} <h3> if tag</h3>
+    {%if name == 'True'%}
+        <h2>hello from if tag</h2>
+    {%else%}
+        <h2>hello from else tag</h2>
+    {%endif%} {% endcomment %}
+
+    {% comment %} This is example 6 {% endcomment %}
+    <h2>for loop</h2>
+    <ul>
+        {% for name in names%}
+            <li>{{i}}</li>
+        {% endfor %}
+</html>
