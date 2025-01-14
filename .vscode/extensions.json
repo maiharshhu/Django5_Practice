@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "bradlc.vscode-tailwindcss",
+        "zignd.html-css-class-completion",
+        "n-for-all.live-tailwind-alpine-preview",
+        "batisteo.vscode-django"
+    ]
+}
