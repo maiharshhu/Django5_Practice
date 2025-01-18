@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>student Registration</h1>
+
+    {% comment %} print as a form {%endcomment%} 
+    <h2> Print as a form</h2>
+    <form action="">
+        {{form}}
+        <input type = "submit" value = "submit">
+    </form> 
+<hr>
+
+{% comment %}Prints as a table {%endcomment%}
+<h2> Print as a table</h2>
+    <form action="">
+        <table>{{form.as_table}}</table>
+        <input type = "submit" value = "submit">
+    </form>    
+<hr>
+
+{% comment %} print as a list 
+<h2> Print as a list</h2>
+    <form action="">
+        <ul>{{form.as_ul}}</ul>
+        <input type = "submit" value = "submit">
+    <form> {% endcomment %}
+
+    {% comment %} <form action="">
+        {{form.as_p}}
+        <input type = "submit" value = "submit">
+    <form> {% endcomment %}
+
+    {% comment %} <form action="">
+        {{form.first_name}}
+        {{form.last_name}}
+        <input type = "submit" value = "submit">
+    <form> {% endcomment %}
+</body>
+</html>
