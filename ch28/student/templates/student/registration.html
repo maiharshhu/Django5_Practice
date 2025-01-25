@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Student Registration</h1>
+    <!---complete form as once-->
+    {% comment %} <form action="">
+        {{ form }}
+    <button type="submit" value="Submit">Submit</button>
+    </form> {% endcomment %}
+
+    {% comment %} <!---Form Field by Field-->
+    <form action="">
+        First Name:{{form.first_name}}
+        Last Name:{{form.last_name}}
+    <button type="submit" value="Submit">Submit</button>
+    </form> {% endcomment %}
+
+    {% comment %} <!---Form Label @ Input by Label & Input-->
+    <form action="">
+        {{form.first_name.label_tag}}{{form.first_name}} <br>
+        {{form.last_name.label_tag}}{{form.last_name}}
+    <button type="submit" value="Submit">Submit</button>
+    </form> {% endcomment %} 
+
+    {% comment %} <!---Form Label @ Input by Label & Input-->
+    <form action="">
+        <label for="{{form.first_name.id_for_label}}">{{form.first_name.label}}</label>{{form.first_name}} <br>
+        <label for="{{form.last_name.id_for_label}}">{{form.last_name.label}}</label>{{form.last_name}}
+    </form>
+    <button type="submit" value="Submit">Submit</button>
+    </form> {% endcomment %}
+
+     <!---Form Label @ Input by Label & Input-->
+    {% comment %} <form action="">
+        <label for="{{form.first_name.id_for_label}}">{{form.first_name.label}}</label>
+        <input type="text" name="{{form.first_name.name}}" required id ="{{form.first_name.id_for_label}}" value="{{form.first_name.value|default:""}}">
+        
+        <label for="{{form.last_name.id_for_label}}">{{form.last_name.label}}</label>
+        <input type="text" name="{{form.last_name.name}}" required id="{{form.last_name.id_for_label}}" value="{{form.last_name.value}}">
+
+        <label for="{{form.email.id_for_label}}">{{form.email.label}}</label>
+        <input type="text" name="{{form.email.name}}" required id="{{form.email.id_for_label}}" value="{{form.email.value}}">
+        <button type="submit" value="Submit">Submit</button>
+    </form> {% endcomment %}
+    {% comment %} <div>
+    {{form.first_name.label}}
+    {{form.last_name.label}}
+    {{form.first_name.html_name}}
+    {{form.first_name.field.required}}
+    {{form.first_name.help_text}}
+    </div> {% endcomment %}
+    
+  </body>
+</html>
