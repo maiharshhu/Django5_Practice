@@ -15,7 +15,8 @@
     </form> {% endcomment %}
 
     {% for field in form %}
-    <label for="{{field
-    .id_for_label}}">{{field.label}}</label> 
+    <label for="{{field.id_for_label}}" class="">{{field.label}}</label>
+    <input class="" type="{{field.field.widget.input_type}}"name="{{form.email.name}}" required id="{{field.id_for_label}}" value="{{form.value|default:' '}}" placeholder="{{field.field.placeholder|default:''}}" required="{{filed.filed.required}}"><br>
+    {% endfor %} 
 </body>
 </html>

@@ -13,3 +13,9 @@ class Address(forms.Form):
     city = forms.CharField()
     state = forms.CharField()
     pin_code = forms.IntegerField()
+
+
+class Login(forms.Form):
+    email = forms.EmailField()
+    password = forms.CharField()
+    key = forms.CharField(widget=forms.HiddenInput())

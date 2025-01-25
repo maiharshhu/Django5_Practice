@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import Registration, Address
+from .forms import Registration, Address, Login
 # Create your views here.
 
 
@@ -11,3 +11,8 @@ def registration(req):
 def address(req):
     fm = Address()
     return render(req, 'student/address.html', {'form': fm})
+
+
+def login(req):
+    fm = Login()
+    return render(req, 'student/login.html', {'form': fm})
