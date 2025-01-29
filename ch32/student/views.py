@@ -10,12 +10,12 @@ def register(request):
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
-            print('Name:', name)
-            print('Email:', email)
-            print('Password', password)
+            print('Name:',name)
+            print('Email:',email)
+            print('password',password)
             return HttpResponseRedirect('/student/register/')
-        
+    
     else:
         form = Registration()
-    return render(request, 'student/register.html',{'form':form})
-        
+    return render(request,'student/register.html',{'form':form})
+    
