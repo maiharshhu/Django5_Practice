@@ -1,1 +1,1 @@
-"# Django5_Practice" 
+Complete Django practice topic wise 
