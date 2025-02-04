@@ -8,12 +8,12 @@
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-    {% comment %} <nav>
+    <nav>
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'generate_qr' %}">Generate QR</a></li>
         <li><a href="{% url 'scan_qr' %}">Scan QR</a></li>
-    </nav>  {% endcomment %}
+    </nav>  
     <h1 class="main-heading">Petrol Pump Payment</h1>
-    {% block contant %}{% endblock contant %}
+    {% block content %}{% endblock content %}
 </body>
 </html>
